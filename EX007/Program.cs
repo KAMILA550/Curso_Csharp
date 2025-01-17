@@ -6,17 +6,28 @@ namespace EX007
     {
         static void Main(string[] args)
         {
-            double nota_final = 50;
+            double nota_final = 100;
             string resultado;
 
             if (nota_final >= 60)
             {
-                resultado = " aprovado";
+                if (nota_final >= 90 )
+                {
+                    resultado = " aprovado com louvor";
+
+                }
+             else
+                {
+                   resultado = "aprovado";
+                }
+                if (nota_final >= 40)
+                {
+                    resultado = "recuperação";
+                }
+                 
             }
-            else if (nota_final >= 40)
-            {
-                resultado = "recuperaçao";
-            }
+          
+       
             else
             {
                 resultado = "reprovado";
@@ -25,7 +36,7 @@ namespace EX007
 
 
 
-            Console.WriteLine("o aluno foi {0}.", resultado);
+            Console.WriteLine( "nota do aluno: {0} - resultado: {1}", nota_final , resultado);
         }
     }
 }
